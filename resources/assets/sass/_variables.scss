@@ -1,4 +1,18 @@
 
+// Variables
+
+// Gray and Brand Colors for use across theme
+
+$theme-primary: #2C3E50;
+$theme-success: #18BC9C;
+
+$gray-base: #000;
+$gray-darker: lighten($gray-base, 13.5%);
+$gray-dark: lighten($gray-base, 20%);
+$gray: lighten($gray-base, 33.5%);
+$gray-light: lighten($gray-base, 46.7%);
+$gray-lighter: lighten($gray-base, 93.5%);
+
 // Body
 $body-bg: #f5f8fa;
 
@@ -11,6 +25,7 @@ $panel-inner-border: $laravel-border-color;
 
 // Brands
 $brand-primary: #3097D1;
+
 $brand-info: #8eb4cb;
 $brand-success: #2ab27b;
 $brand-warning: #cbb956;
