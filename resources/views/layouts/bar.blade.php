@@ -536,19 +536,19 @@
     </div>
 </div>
 <!-- Bootstrap core JavaScript -->
-<script src="../../../vendor/jquery/jquery.min.js"></script>
-<script src="../../../vendor/popper/popper.min.js"></script>
-<script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{asset('js/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('js/popper/popper.min.js')}}"></script>
+<script src="{{asset('js/bootstrap/js/bootstrap.min.js')}}"></script>
 
 <!-- Plugin JavaScript -->
-<script src="../../../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="{{asset('js/jquery-easing/jquery.easing.min.js')}}"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="../../../resources/assets/js/jqBootstrapValidation.js"></script>
-<script src="../../../resources/assets/js/contact_me.js"></script>
+<script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
+<script src="{{asset('js/contact_me.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="../../../resources/assets/js/freelancer.min.js"></script>
+<script src="{{asset('js/freelancer.min.js')}}"></script>
 
 </body>
 
