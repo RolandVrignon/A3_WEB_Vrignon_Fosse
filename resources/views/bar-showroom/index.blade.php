@@ -8,9 +8,15 @@
     <div class="container">
         <div class="row">
                     @forelse($bars as $bar)
-                    <div class="col-sm-4 portfolio-item">
-                        <h3>{{$bar->title}}</h3>
-                        {{$bar->description}}
+                    <div class="col-sm-3 portfolio-item">
+                        <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                        </a>
                     </div>
                     @empty
                         <li>Aucune tâche</li>
@@ -19,5 +25,5 @@
     </div>
 
 
-
 @endsection
+

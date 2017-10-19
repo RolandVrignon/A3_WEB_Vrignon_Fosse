@@ -8567,7 +8567,7 @@ section.success {
 }
 
 header.masthead {
-  padding-top: 100px;
+  padding-top: 65px;
   padding-bottom: 50px;
   text-align: center;
   color: white;
@@ -8594,7 +8594,7 @@ header.masthead .intro-text .skills {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 200px;
+    padding-top: 65px;
     padding-bottom: 100px;
   }
 
