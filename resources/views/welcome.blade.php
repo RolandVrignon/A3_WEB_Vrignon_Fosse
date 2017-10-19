@@ -27,7 +27,6 @@
         </div>
     </div>
 
-    <h1>liste des bars</h1>
 
 
 

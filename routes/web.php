@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function (){
+    return view('welcome');
+});
 
 Route::get('/bars', 'BarsController@index');
 
@@ -21,4 +23,4 @@ Route::resource('bars', 'BarsController');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
