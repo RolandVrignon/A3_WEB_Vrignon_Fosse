@@ -17,7 +17,7 @@ class BarsController extends Controller
     {
         $bars = DB::table('bars')->get();
 
-        return view('welcome', [
+        return view('bar-showroom.index', [
             'bars' => $bars]);
     }
 

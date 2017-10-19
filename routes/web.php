@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'BarsController@index');
+Route::get('/', 'HomeController@index');
 
-Route::get('/home', 'BarsController@index');
+Route::get('/bars', 'BarsController@index');
+
+Route::get('/home', 'HomeController@index');
 
 Route::resource('bars', 'BarsController');
 
