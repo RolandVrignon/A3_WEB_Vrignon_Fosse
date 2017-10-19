@@ -17,23 +17,30 @@
                         @if(Auth::check())
                             {{Auth::user()->email}}
                         @endif
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<header class="masthead">
-    <div class="container">
-        <img class="img-fluid" src="img/profile.png" alt="">
-        <div class="intro-text">
-            <span class="name">Start Bootstrap</span>
-            <hr class="star-light">
-            <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-        </div>
-    </div>
-</header>
+@forelse($bars as $bar)
+    <li>{{$bar->title}}{{$bar->image}}{{$bar->description}}</li>
+@empty
+    <li>rien frr</li>
+@endforelse
 
+        <header class="masthead">
+            <div class="container">
+                <img class="img-fluid" src="img/profile1.png" alt="">
+                <div class="intro-text">
+                    <span class="name">Envie d'une bière ?</span>
+                    <hr class="star-light">
+                    <span class="skills">Nous vous trouvons tous les meilleurs bars de Paris</span>
+                </div>
+            </div>
+        </header>
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
     <div class="container">

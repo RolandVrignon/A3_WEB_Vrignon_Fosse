@@ -1,8 +1,10 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BarsController extends Controller
 {
@@ -13,7 +15,10 @@ class BarsController extends Controller
      */
     public function index()
     {
-        //
+        $bars = DB::table('bars')->get();
+
+        return view('welcome', [
+            'bars' => $bars]);
     }
 
     /**
@@ -23,7 +28,7 @@ class BarsController extends Controller
      */
     public function create()
     {
-        //
+        return view('bars.create');
     }
 
     /**

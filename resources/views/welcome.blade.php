@@ -19,11 +19,22 @@
                             @if(Auth::check())
                                 {{Auth::user()->email}}
                             @endif
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <h1>liste des bars</h1>
+
+    @forelse($bars as $bar)
+        <li>{{$bar->title}}{{$bar->image}}{{$bar->description}}</li>
+    @empty
+        <li>rien frr</li>
+    @endforelse
+
 
     <header class="masthead">
         <div class="container">
