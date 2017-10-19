@@ -37,7 +37,7 @@
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
     <div class="container">
-        <h2 class="text-center">Portfolio</h2>
+        <h2 class="text-center">Nos nouvelles découvertes</h2>
         <hr class="star-primary">
         <div class="row">
             <div class="col-sm-4 portfolio-item">

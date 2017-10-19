@@ -27,11 +27,11 @@
 
     <header class="masthead">
         <div class="container">
-            <img class="img-fluid" src="img/profile.png" alt="">
+            <img class="img-fluid" src="img/profile1.png" alt="">
             <div class="intro-text">
-                <span class="name">Start Bootstrap</span>
+                <span class="name">Envie d'une bière ?</span>
                 <hr class="star-light">
-                <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                <span class="skills">Nous vous trouvons tous les meilleurs bars de Paris</span>
             </div>
         </div>
     </header>
@@ -39,7 +39,7 @@
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
-            <h2 class="text-center">Portfolio</h2>
+            <h2 class="text-center">Nos nouvelles découvertes</h2>
             <hr class="star-primary">
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
