@@ -18,6 +18,7 @@ class CreateBarsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('adresse');
+            $table->binary('image');
             $table->timestamps();
         });
     }
