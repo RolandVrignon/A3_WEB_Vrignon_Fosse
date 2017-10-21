@@ -23,4 +23,3 @@ Route::resource('bars', 'BarsController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

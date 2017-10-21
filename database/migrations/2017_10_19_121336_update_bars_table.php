@@ -16,6 +16,7 @@ class UpdateBarsTable extends Migration
         Schema::table('bars', function (Blueprint $table) {
             $table->integer('user_id')->nullable()->unsigned()->after('id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->text('picture');
         });
     }
 
@@ -29,6 +30,7 @@ class UpdateBarsTable extends Migration
         Schema::table('bars', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
+            $table->dropColumn('picture');
         });
     }
 }
