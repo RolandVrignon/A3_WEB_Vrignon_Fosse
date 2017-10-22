@@ -1,27 +1,19 @@
 @extends('layouts.bar')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                        @if(Auth::check())
-                            {{Auth::user()->email}}
-                        @endif
-
-
-                </div>
+    <header class="masthead">
+        <div class="container">
+            <img class="img-fluid" src="img/profile1.png" alt="">
+            <div class="intro-text">
+                <span class="name">Envie d'une bière ?</span>
+                <hr class="star-light">
+                <span class="skills">Nous vous trouvons les meilleurs bars de Paris</span>
             </div>
         </div>
-    </div>
-</div>
+    </header>
+
+    <a href="{{route('bars.index')}}">Tout nos bars </a>
+    <a href="{{route('bars.create')}}"> Renseignez un bar </a>
+
 @endsection
