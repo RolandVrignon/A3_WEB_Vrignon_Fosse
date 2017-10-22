@@ -13,7 +13,15 @@
         </div>
     </header>
 
-    <a href="{{route('bars.index')}}">Tout nos bars </a>
-    <a href="{{route('bars.create')}}"> Renseignez un bar </a>
+    <div class="container">
+        <div class="form-group">
+            <a href="{{route('bars.index')}}" class="btn btn-block btn-primary" placeholder="Tout nos bars">Tout nos bars
+            </a>
+        </div>
+        <div class="form-group">
+            <a href="{{route('bars.create')}}" class="btn btn-block btn-primary" placeholder="Renseignez un bar">Renseignez un bar</a>
+        </div>
+    </div>
+
 
 @endsection

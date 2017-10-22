@@ -12,10 +12,9 @@
                         <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <li>{{ $bar->title }} {{ $bar->picture }} {{ $bar->description }}</li>
+                                    {{ $bar->title }} {{ $bar->picture }} {{ $bar->description }}
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
                         </a>
                     </div>
                     @empty
