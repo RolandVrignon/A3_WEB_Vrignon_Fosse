@@ -3,8 +3,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Bar;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class BarsController extends Controller
 {
@@ -34,12 +38,40 @@ class BarsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,
+            [
+                'title' => 'required',
+                'content' => 'required',
+                'picture' => 'required',
+            ],
+            [
+                'title.required' => 'un titre est requis.',
+                'content.required' => 'un déscriptif est requis.',
+                'picture.required' => 'Votre article doit contenir une image',
+
+            ]);
+
+
+        $barPicture = $request->file('picture');
+        $extension = Input::file('picture')->getClientOriginalExtension();
+        $filename = rand(1111111, 9999999) . '.' . $extension;
+        Image::make($barPicture)->resize(600, 300)->save(public_path('/uploads/bars_pictures/' . $filename));
+
+
+        $bar = new Bar();
+        $input = $request->input();
+        $input['user_id'] = Auth::user()->id;
+        $input['picture'] = $filename;
+
+        $bar->fill($input)->save();
+
+        return redirect('bar')->with('success', 'Votre bar a bien été enregistré');
+
     }
 
     /**

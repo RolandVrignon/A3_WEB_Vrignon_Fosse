@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         $bars = DB::table('bars')->get();
 
-        return view('home', [
+        return view('welcome', [
             'bars' => $bars]);
     }
 
