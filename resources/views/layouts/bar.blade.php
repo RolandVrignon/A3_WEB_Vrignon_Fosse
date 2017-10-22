@@ -27,7 +27,7 @@
 <body id="page-top">
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="margin-bottom: 0px;">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Kelbar</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,12 +42,7 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="bars">Nos bars</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="home/#about">A propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="home/#contact">Contact</a>
-                </li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
@@ -62,16 +57,25 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
+                                <a href="bars.create">
+                                    Renseigner un bar
+                                </a>
+                            </li>
+
+
+                            <li>
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    Logout
+                                    Se déconnecter
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
-                            </li>
+
+
+
                         </ul>
                     </li>
                     @endguest
