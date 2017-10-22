@@ -49,12 +49,13 @@ class BarsController extends Controller
                 'title' => 'required',
                 'description' => 'required',
                 'picture' => 'required',
+                'adresse' => 'required',
             ],
             [
                 'title.required' => 'un titre est requis.',
                 'description.required' => 'un déscriptif est requis.',
-                'picture.required' => 'Votre article doit contenir une image',
-
+                'picture.required' => 'Vous devez mettre une image',
+                'adresse.required' => 'une adresse est requise'
             ]);
 
 
@@ -70,7 +71,7 @@ class BarsController extends Controller
 
         $bar->fill($input)->save();
 
-        return redirect('bar')->with('success', 'Votre bar a bien été enregistré');
+        return redirect('bars')->with('success', 'Votre bar a bien été enregistré');
 
     }
 

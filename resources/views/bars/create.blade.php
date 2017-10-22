@@ -14,8 +14,11 @@
                             <input class="form-control" type="text" name="title" placeholder="Titre"
                                    style="width:100%;">
                             <br>
-                            <textarea class="form-control" name="content" id="" cols="30" row="10" style="width:100%;"
-                                      placeholder="contenu"></textarea>
+                            <textarea class="form-control" name="description" id="" cols="30" row="10" style="width:100%;"
+                                      placeholder="description"></textarea>
+                            <br>
+                            <textarea class="form-control" name="adresse" id="" cols="30" row="10" style="width:100%;"
+                                      placeholder="adresse"></textarea>
                             <br>
                             <input type="file" name="picture" id="files" class="hidden">
                             <label class="btn btn-primary" for="files">Choissisez une image</label>

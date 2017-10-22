@@ -12,7 +12,9 @@
                         <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
-                                    {{ $bar->title }} {{ $bar->picture }} {{ $bar->description }}
+                                   <h1>{{  $bar->title }} </h1>
+                                    <p>{{ $bar->description }}</p>
+                                    <img src="{{ asset('uploads/bars_pictures/' . $bar->picture) }}" alt="">
                                 </div>
                             </div>
                         </a>
