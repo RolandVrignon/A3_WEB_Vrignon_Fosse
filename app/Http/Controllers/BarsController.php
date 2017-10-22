@@ -4,11 +4,12 @@
 namespace App\Http\Controllers;
 
 use App\Bar;
-use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Intervention\Image\Facades\Image;
+
 
 class BarsController extends Controller
 {
@@ -46,12 +47,12 @@ class BarsController extends Controller
         $this->validate($request,
             [
                 'title' => 'required',
-                'content' => 'required',
+                'description' => 'required',
                 'picture' => 'required',
             ],
             [
                 'title.required' => 'un titre est requis.',
-                'content.required' => 'un déscriptif est requis.',
+                'description.required' => 'un déscriptif est requis.',
                 'picture.required' => 'Votre article doit contenir une image',
 
             ]);
@@ -65,7 +66,6 @@ class BarsController extends Controller
 
         $bar = new Bar();
         $input = $request->input();
-        $input['user_id'] = Auth::user()->id;
         $input['picture'] = $filename;
 
         $bar->fill($input)->save();
