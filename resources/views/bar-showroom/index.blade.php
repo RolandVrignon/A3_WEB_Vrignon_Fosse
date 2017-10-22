@@ -9,7 +9,7 @@
         <div class="row">
                     @forelse($bars as $bar)
                     <div class="col-sm-3 portfolio-item">
-                        <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+                        <a class="portfolio-link" href="{{route('bars.show', ['id' => $bar->id])}}" >
                             <div class="caption">
                                 <div class="caption-content">
                                    <h1>{{  $bar->title }} </h1>
