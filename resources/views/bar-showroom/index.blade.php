@@ -5,6 +5,7 @@
     <div class="container selection">
 
         <h1 class="text-center">Voici notre séléction</h1>
+        <h3 class="text-center sous-titre">Où boire un verre? Notre guide est parfait pour vous</h3>
 
         <div class="row">
                     @forelse($bars as $bar)

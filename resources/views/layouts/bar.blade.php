@@ -59,6 +59,12 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{route('bars.create')}}">
+                                    Mes Bars
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('bars.create')}}">
                                     Renseigner un bar
                                 </a>
                             </li>

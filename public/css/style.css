@@ -54,7 +54,19 @@
     height: 400px;
 }
 
+.show{
+    margin-top: 60px;
+}
+
 .show img{
     height: 230px;
 }
 
+.game{
+    position: absolute;
+    bottom: 32px;
+}
+
+.sous-titre{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
