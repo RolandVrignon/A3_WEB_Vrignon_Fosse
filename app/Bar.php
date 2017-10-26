@@ -18,7 +18,11 @@ class Bar extends Model
     }
 
     protected $fillable = [
-        'user_id', 'title', 'description', 'adresse', 'picture',
+        'user_id', 'title', 'description', 'adresse', 'picture', 'flechette', 'billard', 'flipper', 'baby-foot',
 
     ];
+
+    /**
+     * @return array
+     */
 }

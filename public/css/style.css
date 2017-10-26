@@ -1,0 +1,60 @@
+.picture{
+    width: 100%;
+}
+
+.selection{
+    margin-top: 40px;
+    background-color: #ffffff;;
+}
+
+.selection h1{
+    margin-bottom: 30px;
+}
+
+.selection a {
+    text-decoration: none;
+}
+
+.selection .row{
+    background-color: white; !important
+}
+.bar-title{
+    font-size: 20px;
+    color: #212529;
+}
+
+.bar-description{
+    font-family: Calibri;
+    color: #212529;
+}
+
+.second{
+    height: 100vh;
+}
+
+.navbar{
+    height: 70px;
+}
+
+.masthead{
+    height: 100vh;
+}
+
+.intro-text span{
+    margin-bottom: 20px;
+}
+
+.img-fluid{
+    height: 130px; !important;
+}
+
+.thumbnail{
+    background-color: #E5E3E3;
+    margin-top: 30px;
+    height: 400px;
+}
+
+.show img{
+    height: 230px;
+}
+

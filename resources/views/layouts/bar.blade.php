@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -57,7 +58,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="bars.create">
+                                <a href="{{route('bars.create')}}">
                                     Renseigner un bar
                                 </a>
                             </li>

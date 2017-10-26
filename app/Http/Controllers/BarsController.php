@@ -50,6 +50,9 @@ class BarsController extends Controller
                 'description' => 'required',
                 'picture' => 'required',
                 'adresse' => 'required',
+
+
+
             ],
             [
                 'title.required' => 'un titre est requis.',
