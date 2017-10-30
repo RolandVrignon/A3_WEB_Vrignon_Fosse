@@ -1,10 +1,39 @@
+body{
+    background-color: #efefef;
+
+}
+
+.title{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 53px;
+    color: #333333;
+}
+
+.subtitle{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 30px;
+}
+
+.thumbnail .title{
+    font-size: 24px;
+    color: #3097D1;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sous-titre{
+    font-family: inherit;
+    text-align: center;
+    color: #333333;
+}
+
 .picture{
     width: 100%;
 }
 
 .selection{
     margin-top: 40px;
-    background-color: #ffffff;;
 }
 
 .selection h1{
@@ -16,16 +45,25 @@
 }
 
 .selection .row{
-    background-color: white; !important
+    background-color: rgba(35, 255, 211, 0);
 }
 .bar-title{
     font-size: 20px;
-    color: #212529;
+    color: #3097D1;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 .bar-description{
-    font-family: Calibri;
-    color: #212529;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.72857143;
+    color: #333333;
+    margin-top: 10px;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 .second{
@@ -49,7 +87,7 @@
 }
 
 .thumbnail{
-    background-color: #E5E3E3;
+    background-color: #ffffff;
     margin-top: 30px;
     height: 400px;
 }
@@ -65,4 +103,13 @@
 
 .sous-titre{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.underpicture{
+    margin: 8px;
+}
+
+.game{
+    position: absolute;
+    bottom: 8%;
 }

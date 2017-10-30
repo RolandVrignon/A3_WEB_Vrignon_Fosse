@@ -4,8 +4,13 @@
 
     <div class="container selection">
 
-        <h1 class="text-center">Voici notre séléction</h1>
-        <h3 class="text-center sous-titre">Où boire un verre? Notre guide est parfait pour vous</h3>
+
+
+        <div class="intro-text text-center">
+            <span class="name title">Voici notre séléction</span><br>
+
+            <span class="skills subtitle ">Où boire un verre? Notre guide est parfait pour vous</span>
+        </div>
 
         <div class="row">
                     @forelse($bars as $bar)
@@ -13,29 +18,32 @@
                             <div class="caption">
                                 <a class="caption-content thumbnail" href="{{route('bars.show', ['id' => $bar->id])}}">
                                     <img class="picture" src="{{ asset('uploads/bars_pictures/' . $bar->picture) }}" alt="">
-                                    <h1 class="bar-title">{{  $bar->title }} </h1>
-                                    <p class="bar-description">{{ str_limit($bar->description, 70) }}
-                                    </p>
-                                <div class="game">
-                                    @if ( $bar->flechettes == 1)
-                                        <img class="game_picture" src="img/target.png" style="height: 20px;">
-                                    @endif
+                                    <div class="underpicture">
+                                        <span class="skills title ">{{  $bar->title }} </span>
+                                        <p class="bar-description">{{ str_limit($bar->description, 200) }}
+                                        </p>
+                                        <div class="game">
+                                            @if ( $bar->flechettes == 1)
+                                                <img class="game_picture" src="img/target.png" style="height: 20px;">
+                                            @endif
 
-                                    @if ( $bar->billard == 1)
-                                        <img class="game_picture" src="img/pool.png" style="height: 20px;">
-                                    @else
-                                    @endif
+                                            @if ( $bar->billard == 1)
+                                                <img class="game_picture" src="img/pool.png" style="height: 20px;">
+                                            @else
+                                            @endif
 
-                                    @if ( $bar->flipper == 1)
-                                        <img class="game_picture" src="img/pinball.png" style="height: 20px;">
-                                    @else
-                                    @endif
+                                            @if ( $bar->flipper == 1)
+                                                <img class="game_picture" src="img/pinball.png" style="height: 20px;">
+                                            @else
+                                            @endif
 
-                                    @if ( $bar->baby_foot == 1)
-                                        <img class="game_picture" src="img/foosball.png" style="height: 20px;">
-                                    @else
-                                    @endif
-                                </div>
+                                            @if ( $bar->baby_foot == 1)
+                                                <img class="game_picture" src="img/foosball.png" style="height: 20px;">
+                                            @else
+                                            @endif
+                                        </div>
+                                    </div>
+
 
 
                                 </a>

@@ -6311,7 +6311,6 @@ a.badge:focus {
 
 .thumbnail {
   display: block;
-  padding: 4px;
   margin-bottom: 22px;
   line-height: 1.6;
   background-color: #fff;
@@ -8380,6 +8379,7 @@ h5,
 h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 hr.star-light,
@@ -8981,4 +8981,7 @@ fieldset[disabled] .btn-success:hover {
 .btn:focus {
   outline: none;
 }
+
+
+
 
