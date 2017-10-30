@@ -21,9 +21,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('bars', 'BarsController');
 
-Route::get('bars/{id}/islikedbyme', 'BarsController@isLikedByMe');
+/*Route::get('bars/{id}/islikedbyme', 'BarsController@isLikedByMe');
 
-Route::post('bar/like', 'API\PostController@like');
+Route::post('bar/like', 'API\PostController@like');*/
 
 Auth::routes();
 

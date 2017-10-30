@@ -48,32 +48,28 @@ class BarsController extends Controller
             [
                 'title' => 'required',
                 'description' => 'required',
+                'flechettes'=>'required',
+                'billard'=>'required',
+                'flipper'=>'required',
+                'baby_foot'=>'required',
                 'picture' => 'required',
                 'adresse' => 'required',
-
-
-
             ],
+
             [
                 'title.required' => 'un titre est requis.',
                 'description.required' => 'un déscriptif est requis.',
                 'picture.required' => 'Vous devez mettre une image',
                 'adresse.required' => 'une adresse est requise'
             ]);
-
-
         $barPicture = $request->file('picture');
         $extension = Input::file('picture')->getClientOriginalExtension();
         $filename = rand(1111111, 9999999) . '.' . $extension;
         Image::make($barPicture)->resize(600, 300)->save(public_path('/uploads/bars_pictures/' . $filename));
-
-
         $bar = new Bar();
         $input = $request->input();
         $input['picture'] = $filename;
-
         $bar->fill($input)->save();
-
         return redirect('bars')->with('success', 'Votre bar a bien été enregistré');
 
     }
