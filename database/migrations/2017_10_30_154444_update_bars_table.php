@@ -14,10 +14,7 @@ class UpdateBarsTable extends Migration
     public function up()
     {
         Schema::table('bars', function (Blueprint $table) {
-            $table->boolean('flechettes')->default(false);
-            $table->boolean('billard')->default(false);
-            $table->boolean('flipper')->default(false);
-            $table->boolean('baby_foot')->default(false);
+            $table->longText('horaires');
         });
 
     }
@@ -27,14 +24,10 @@ class UpdateBarsTable extends Migration
      *
      * @return void
      */
+
     public function down()
     {
         Schema::table('bars', function (Blueprint $table) {
-            $table->dropColumn(['flechettes',
-                'billard',
-                'flipper',
-                'baby_foot',
-            ]);
-        });
-    }
-}
+            $table->dropColumn(['horaires']);
+    });
+}}

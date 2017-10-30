@@ -54,13 +54,15 @@ class BarsController extends Controller
                 'baby_foot'=>'required',
                 'picture' => 'required',
                 'adresse' => 'required',
+                'horaires' => 'required',
             ],
 
             [
                 'title.required' => 'un titre est requis.',
                 'description.required' => 'un déscriptif est requis.',
                 'picture.required' => 'Vous devez mettre une image',
-                'adresse.required' => 'une adresse est requise'
+                'adresse.required' => 'une adresse est requise',
+                'horaires.required' => 'Des horaires sont requises'
             ]);
         $barPicture = $request->file('picture');
         $extension = Input::file('picture')->getClientOriginalExtension();

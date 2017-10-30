@@ -18,7 +18,7 @@ class Bar extends Model
     }
 
     protected $fillable = [
-        'user_id', 'title', 'description', 'adresse', 'picture', 'flechettes', 'billard', 'flipper', 'baby_foot',
+        'user_id', 'title', 'description', 'adresse', 'picture', 'flechettes', 'billard', 'flipper', 'baby_foot', 'horaires'
 
     ];
 
