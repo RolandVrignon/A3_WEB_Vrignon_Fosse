@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="home">Accueil</a>
+                    <a class="nav-link js-scroll-trigger" href="{{route('home.index')}}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="bars">Nos bars</a>
+                    <a class="nav-link js-scroll-trigger" href="{{route('bars.index')}}">Nos bars</a>
                 </li>
 
             </ul>

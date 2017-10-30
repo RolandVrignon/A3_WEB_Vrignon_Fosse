@@ -26,10 +26,8 @@ class HomeController extends Controller
 
      public function index()
     {
-        $bars = DB::table('bars')->get();
 
-        return view('welcome', [
-            'bars' => $bars]);
+        return view('welcome');
     }
 
     /**

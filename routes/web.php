@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', function (){
-    return view('welcome');
-});
 
 Route::get('/bars', 'BarsController@index');
 
 Route::get('/home', 'HomeController@index');
 
 Route::resource('bars', 'BarsController');
+
+Route::resource('home', 'HomeController');
 
 /*Route::get('bars/{id}/islikedbyme', 'BarsController@isLikedByMe');
 
