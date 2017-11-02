@@ -85,6 +85,7 @@ class BarsController extends Controller
     public function show($id)
     {
         $bar = Bar::find($id);
+
         if (!$bar) {
             return redirect()->route('bar-showroom.index');
         }
