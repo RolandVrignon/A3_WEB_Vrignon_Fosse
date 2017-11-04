@@ -76,40 +76,45 @@
 
               @forelse($bars as $bar)
                   <div class="col-lg-4 col-md-4" >
-                      <div class="fh5co-blog animate-box">
-                          <a href="#"><img class="img-responsive" src="{{ asset('uploads/bars_pictures/' . $bar->picture) }}" alt=""></a>
+                      <div class="fh5co-blog animate-box" style="margin-top: 50px">
+                          <a href="{{route('bars.show', ['id' => $bar->id])}}"><img class="img-responsive" src="{{ asset('uploads/bars_pictures/' . $bar->picture) }}" alt=""></a>
                           <div class="image-popup" href="#">
                               <div class="prod-title">
                                   <h3><a href="{{route('bars.show', ['id' => $bar->id])}}">{{  $bar->title }} </a></h3>
                                   <span class="posted_by">Posted by: Admin</span>
-                                  <span class="comment"><a href="">21<i class="icon-bubble22"></i></a></span>
+
+                                  <span class="comment">
+                                      <a href="">21<i class="icon-bubble22"></i></a>
+                                  </span>
                                   <p>{{ str_limit($bar->description, 100) }}</p>
-                                  <a href="{{route('bars.show', ['id' => $bar->id])}}" class="btn btn-primary">Read More</a>
-
-                                  <div class="game">
-                                      @if ( $bar->flechettes == 1)
-                                          <img class="game_picture" src="img/target.png" style="height: 20px;">
-                                      @endif
-
-                                      @if ( $bar->billard == 1)
-                                          <img class="game_picture" src="img/pool.png" style="height: 20px;">
-                                      @else
-                                      @endif
-
-                                      @if ( $bar->flipper == 1)
-                                          <img class="game_picture" src="img/pinball.png" style="height: 20px;">
-                                      @else
-                                      @endif
-
-                                      @if ( $bar->baby_foot == 1)
-                                          <img class="game_picture" src="img/foosball.png" style="height: 20px;">
-                                      @else
-                                      @endif
-                                  </div>
                               </div>
                           </div>
                       </div>
+                      <div class="bottom">
+                          <a href="{{route('bars.show', ['id' => $bar->id])}}" class="btn btn-primary read_more" style="bottom: 0px;position: absolute;">Read More</a>
+                          <div class="game" style="position: absolute; bottom: 0px; right: 0px">
+                              @if ( $bar->flechettes == 1)
+                                  <img class="game_picture" src="img/target.png" style="height: 20px;">
+                              @endif
+
+                              @if ( $bar->billard == 1)
+                                  <img class="game_picture" src="img/pool.png" style="height: 20px;">
+                              @else
+                              @endif
+
+                              @if ( $bar->flipper == 1)
+                                  <img class="game_picture" src="img/pinball.png" style="height: 20px;">
+                              @else
+                              @endif
+
+                              @if ( $bar->baby_foot == 1)
+                                  <img class="game_picture" src="img/foosball.png" style="height: 20px;">
+                              @else
+                              @endif
+                          </div>
+                      </div>
                   </div>
+
 
 
               @empty

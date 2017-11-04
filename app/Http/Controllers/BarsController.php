@@ -21,7 +21,6 @@ class BarsController extends Controller
     public function index()
     {
         $bars = DB::table('bars')->get();
-
         return view('bar-showroom.index', [
             'bars' => $bars]);
     }

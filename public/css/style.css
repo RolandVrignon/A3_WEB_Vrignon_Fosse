@@ -1144,4 +1144,10 @@ figure {
 
 }
 
+.read_more{
+  position: absolute !important;
+  bottom: 0% !important;
+}
+
+
 /*# sourceMappingURL=style.css.map */

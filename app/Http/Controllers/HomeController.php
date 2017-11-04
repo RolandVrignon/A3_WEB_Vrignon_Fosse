@@ -22,8 +22,9 @@ class HomeController extends Controller
 
      public function index()
     {
-
-        return view('welcome');
+        $bars = DB::table('bars')->orderByRaw('id DESC')->take(3)->get();
+        return view('welcome', [
+            'bars' => $bars]);
     }
 
     /**
