@@ -101,6 +101,15 @@
     <div id="fh5co-blog-section" class="fh5co-section-gray">
         <div class="container">
             <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                    <h3>Ns dernières trouvailles</h3>
+                    <p>Le pain est l'énergie de la vie, mais la bière est la vie même.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
                 @forelse($bars as $bar)
                     <div class="col-lg-4 col-md-4" >
                         <div class="fh5co-blog animate-box" style="margin-top: 50px">
