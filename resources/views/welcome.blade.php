@@ -102,7 +102,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                    <h3>Ns dernières trouvailles</h3>
+                    <h3>Nos 3 dernières trouvailles</h3>
                     <p>Le pain est l'énergie de la vie, mais la bière est la vie même.</p>
                 </div>
             </div>

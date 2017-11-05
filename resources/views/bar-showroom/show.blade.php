@@ -7,7 +7,7 @@
         <div class="fh5co-cover fh5co-cover_2 text-center" data-stellar-background-ratio="0.5" style="background-image: url({{ asset('uploads/bars_pictures/' . $bar->picture) }});">
             <div class="desc animate-box">
                 <h2>{{ $bar->title }}</h2>
-                <span>La crème de la crème</span>
+                <span>{{ $bar->adresse }}</span>
             </div>
         </div>
     </div>
