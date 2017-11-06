@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -21,7 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="shortcut icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
@@ -36,6 +38,13 @@
     <!-- Modernizr JS -->
     <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
     <script src="{{asset('js/respond.min.js')}}"></script>
+
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+
 </head>
 
 
@@ -164,6 +173,10 @@
                                 </a>
                                 <ul class="fh5co-sub-menu" role="menu">
                                     <li>
+                                        <a href="{{ url('my_favorites') }}">My Favorites</a>
+                                    </li>
+
+                                    <li>
                                         <a href="{{route('bars.index')}}">
                                             Mes Bars
                                         </a>
@@ -220,6 +233,41 @@
     <script src="{{asset('js/hoverIntent.js')}}"></script>
     <script src="{{asset('js/superfish.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
+                <script>
+                    export default {
+                        props: ['post', 'favorited'],
+
+                        data: function() {
+                            return {
+                                isFavorited: '',
+                            }
+                        },
+
+                        mounted() {
+                            this.isFavorited = this.isFavorite ? true : false;
+                        },
+
+                        computed: {
+                            isFavorite() {
+                                return this.favorited;
+                            },
+                        },
+
+                        methods: {
+                            favorite(post) {
+                                axios.post('/favorite/'+post)
+                                        .then(response => this.isFavorited = true)
+                            .catch(response => console.log(response.data));
+                            },
+
+                            unFavorite(post) {
+                                axios.post('/unfavorite/'+post)
+                                        .then(response => this.isFavorited = false)
+                            .catch(response => console.log(response.data));
+                            }
+                        }
+                    }
+                </script>
 
 </body>
 

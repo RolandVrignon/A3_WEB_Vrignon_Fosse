@@ -20,9 +20,9 @@ class BarsController extends Controller
      */
     public function index()
     {
-        $bars = DB::table('bars')->get();
-        return view('bar-showroom.index', [
-            'bars' => $bars]);
+        $bars = Bar::paginate(15);
+
+        return view('bars.index', compact('bars'));
     }
 
     /**
@@ -123,6 +123,33 @@ class BarsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Favorite a particular post
+     *
+     * @param  Bar $bar
+     * @return Response
+     */
+
+    public function favoritePost(Bar $bar)
+    {
+        Auth::user()->favorites()->attach($bar->id);
+
+        return back();
+    }
+
+    /**
+     * Unfavorite a particular post
+     *
+     * @param  Bar $bar
+     * @return Response
+     */
+    public function unFavoritePost(Bar $bar)
+    {
+        Auth::user()->favorites()->detach($bar->id);
+
+        return back();
     }
 
 }

@@ -2,25 +2,28 @@
 
 namespace App;
 
+use App\Favorite;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 
 class Bar extends Model
 {
-
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
-
-    public function comments()
-    {
-        return $this->hasMany('App\Comment');
-    }
+    /**
+     * Fields that are mass assignable
+     * @var array
+     */
 
     protected $fillable = [
-        'user_id', 'title', 'description', 'adresse', 'picture', 'flechettes', 'billard', 'flipper', 'baby_foot', 'horaires'
+        'user_id', 'title', 'description', 'adresse', 'flechettes', 'billard', 'flipper', 'baby_foot', 'horaires', 'picture'
 
     ];
+
+    public function favorited()
+    {
+        return (bool) Favorite::where('user_id', Auth::id())
+            ->where('user_id', $this->id)
+            ->first();
+    }
 
     /**
      * @return array

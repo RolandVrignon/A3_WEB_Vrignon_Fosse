@@ -22,9 +22,13 @@ Route::resource('bars', 'BarsController');
 
 Route::resource('home', 'HomeController');
 
-/*Route::get('bars/{id}/islikedbyme', 'BarsController@isLikedByMe');
+Route::post('favorite/{bar}', 'BarsController@favoritePost');
+Route::post('unfavorite/{bar}', 'BarsController@unFavoritePost');
 
-Route::post('bar/like', 'API\PostController@like');*/
+
+
+Route::get('my_favorites', 'UsersController@myFavorites')->middleware('auth');
+
 
 Auth::routes();
 

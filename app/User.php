@@ -27,4 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function favorites()
+    {
+        return $this->belongsToMany(Bar::class, 'favorites', 'user_id', 'post_id')->withTimeStamps();
+    }
 }

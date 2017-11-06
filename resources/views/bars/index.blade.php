@@ -124,9 +124,6 @@
 
                       </div>
                   </div>
-
-
-
               @empty
                   <li>Pas de bars</li>
               @endforelse
